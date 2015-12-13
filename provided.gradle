@@ -1,0 +1,27 @@
+apply plugin: 'maven'
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main.compileClasspath += [configurations.provided]
+    test.compileClasspath += [configurations.provided]
+    test.runtimeClasspath += [configurations.provided]
+}
+
+idea {
+    module {
+        scopes.PROVIDED.plus += [configuration.provided]
+    }
+}
+
+javadoc {
+    classpath += [configuration.provided]
+}
+
+eclipse {
+    classpath {
+        plusConfigurations += [configuration.provided]
+    }
+}
