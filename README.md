@@ -4,6 +4,8 @@ This repository collects my gradle plugins.
 - provided scope plugin
 
 ## Release Note
+- **1.0.0**  
+  create provided plugin
 
 ## provided scope plugin
 This plugin adds 'provided scope'
