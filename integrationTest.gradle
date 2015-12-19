@@ -1,0 +1,14 @@
+confiurations {
+    integrationTestCompile.extendsFrom test
+    integrationTestRuntime.extendsFrom test
+}
+
+test {
+    // exclude *IT.class from test phase.
+    exclude '**/*IT.class'
+}
+
+task integrationTest(type: Test) {
+    description = "Run Itegration Test (located in src/test/java/**IT"
+    include '**/*IT.class'
+}
